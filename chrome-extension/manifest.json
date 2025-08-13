@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "IndexTTS Web Reader",
+  "version": "1.0.0",
+  "description": "Offline text-to-speech extension that reads web page content using IndexTTS",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "nativeMessaging"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IndexTTS Web Reader"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["audio/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

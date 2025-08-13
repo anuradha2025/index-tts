@@ -13,3 +13,18 @@ build/
 *.py[cod]
 *.egg-info/
 .venv
+
+# Chrome extension generated files
+chrome-extension/audio/*.wav
+chrome-extension/audio/*.mp3
+
+# User configuration files
+.indextts/
+
+# Native messaging logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+/tmp/

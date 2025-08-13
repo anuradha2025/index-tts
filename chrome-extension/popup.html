@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .header h1 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+    
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    
+    .btn-primary {
+      background-color: #3498db;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #2980b9;
+    }
+    
+    .btn-secondary {
+      background-color: #95a5a6;
+      color: white;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #7f8c8d;
+    }
+    
+    .btn-danger {
+      background-color: #e74c3c;
+      color: white;
+    }
+    
+    .btn-danger:hover {
+      background-color: #c0392b;
+    }
+    
+    .status {
+      padding: 8px;
+      border-radius: 4px;
+      margin: 10px 0;
+      font-size: 12px;
+      text-align: center;
+    }
+    
+    .status.processing {
+      background-color: #f39c12;
+      color: white;
+    }
+    
+    .status.ready {
+      background-color: #27ae60;
+      color: white;
+    }
+    
+    .status.error {
+      background-color: #e74c3c;
+      color: white;
+    }
+    
+    .shortcuts {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      font-size: 11px;
+      color: #7f8c8d;
+    }
+    
+    .shortcuts strong {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔊 IndexTTS Reader</h1>
+  </div>
+  
+  <div id="status" class="status ready">Ready to read</div>
+  
+  <div class="controls">
+    <button id="readSelection" class="btn btn-primary">Read Selected Text</button>
+    <button id="readPage" class="btn btn-primary">Read Entire Page</button>
+    <button id="stopReading" class="btn btn-danger">Stop Reading</button>
+    <button id="openSettings" class="btn btn-secondary">Settings</button>
+  </div>
+  
+  <div class="shortcuts">
+    <strong>Shortcuts:</strong><br>
+    Ctrl+Shift+R: Read selected/page<br>
+    Ctrl+Shift+S: Stop reading
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
