@@ -1,0 +1,9 @@
+{
+  "name": "com.indextts.host",
+  "description": "IndexTTS Native Messaging Host",
+  "path": "REPLACE_WITH_ACTUAL_PATH/native-host/indextts_host.py",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://EXTENSION_ID_PLACEHOLDER/"
+  ]
+}
